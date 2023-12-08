@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors({ 
-  origin: 'http://localhost:3000',
+  origin: 'https://theweekendcoders-awxkqw5faq-wl.a.run.app',
   methods: ["GET", "POST", "OPTIONS", "PUT"],
   optionsSuccessStatus: 200,
   credentials: true,
@@ -45,6 +45,7 @@ const createAdminEmail = (formData) => {
   
       Name: ${formData.name}
       Email: ${formData.email}
+      profession: ${formData.profession}
       Selected Services: ${formData.selectedServices.join(", ")}
       Phone Number: ${formData.number}
       Requirement: ${formData.requirement}
