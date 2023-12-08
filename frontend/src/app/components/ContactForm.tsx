@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
             // Make a POST request to the backend endpoint
             setLoading(true);
             const response = await axios.post(
-                "https://theweekendcoders-backend.vercel.app/submit-form",
+                "http://localhost:3001/submit-form",
                 data, { withCredentials: true }
             );
             setStep((prevStep) => prevStep + 1);
