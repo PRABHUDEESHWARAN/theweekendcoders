@@ -10,7 +10,7 @@ interface FormData {
     name: string;
     email: string;
     message: string;
-    category: string;
+    profession: string;
     requirement: string;
     number: string;
     selectedServices: string[];
@@ -155,17 +155,17 @@ const ContactForm: React.FC = () => {
                             <label className="block">
                                 <span className="text-2xl block">Profession</span>
                                 <input
-                                    {...register("category", {
+                                    {...register("profession", {
                                         required: "This field is required",
                                     })}
                                     placeholder="Enter Your Profession"
                                     className={`mt-1 h-14 block w-full border-b-2 border-white bg-transparent rounded-[6px] p-6 sm:text-[20px] ${errors.category ? "border-red-500" : ""
                                         }`}
                                 />
-                                {errors.category && (
+                                {errors.profession && (
                                     <span className="text-red-500 text-sm">
                                         {" "}
-                                        {errors.category.message}
+                                        {errors.profession.message}
                                     </span>
                                 )}
                             </label>
